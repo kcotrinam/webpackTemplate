@@ -9,6 +9,8 @@ module.exports = {
   output: {
     filename: "app.js",
     path: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+    assetModuleFilename: 'images/[name][ext][query]'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,7 +29,11 @@ module.exports = {
           "css-loader",
           "sass-loader"
         ]
-      }
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+      },
     ]
   },
   optimization: {
