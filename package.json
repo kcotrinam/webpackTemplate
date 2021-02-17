@@ -13,6 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^5.0.2",
+    "html-webpack-plugin": "^5.1.0",
     "node-sass": "^5.0.0",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
