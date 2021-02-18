@@ -45,7 +45,9 @@ module.exports = {
     minimizer: [
       new CleanWebpackPlugin(),
       new CssMinimizerPlugin(),
-      new TerserPlugin()
+      new TerserPlugin({
+        extractComments: false,
+      })
     ]
   }
 }
