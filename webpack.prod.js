@@ -3,19 +3,11 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const base = require("./webpack.base");
+const { merge } = require("webpack-merge");
 
-
-
-const path = require("path");
-
-module.exports = {
-  entry: "./src/index.js",
-  output: {
-    filename: "app.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "./",
-    assetModuleFilename: 'images/[name][ext][query]'
-  },
+module.exports = merge(base, {
+  mode: "production",
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'
@@ -24,27 +16,6 @@ module.exports = {
       filename: "[name].css"
     })
   ],
-  module: {
-    rules: [
-      {
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: "babel-loader"
-      },
-      {
-        test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
-        type: 'asset/resource',
-      },
-    ]
-  },
   optimization: {
     minimize: true,
     minimizer: [
@@ -55,4 +26,4 @@ module.exports = {
       })
     ]
   }
-}
+})
