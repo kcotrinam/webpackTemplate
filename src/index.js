@@ -1,4 +1,10 @@
 import "./scss/styles.scss"
+
+const container = document.querySelector('body');
+
+const div = document.createElement('div')
+div.innerHTML = 'Hello chuck!'
+
 const requestJoke = async () => {
   const url = "https://api.chucknorris.io/jokes/random";
   const response = await fetch(url);
@@ -8,7 +14,10 @@ const requestJoke = async () => {
 
 const displayJoke = async () => {
   const joke = await requestJoke();
-  console.log(joke.value)
+  container.innerText = joke.value
+  container.appendChild(div)
+  container.appendChild(div)
 }
 
+console.log('hello')
 displayJoke()

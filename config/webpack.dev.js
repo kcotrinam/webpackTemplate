@@ -1,7 +1,6 @@
 const path = require("path");
 const base = require("./webpack.base");
 const { merge } = require("webpack-merge");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const devConfig = {
   mode: "development",
@@ -12,7 +11,8 @@ const devConfig = {
   devServer: {
     port: 3000,
     contentBase: "../dist",
-    open: true
+    open: true,
+    hot:true
   },
   module: {
     rules: [
