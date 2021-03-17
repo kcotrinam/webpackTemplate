@@ -10,12 +10,13 @@ const { merge } = require("webpack-merge");
 const prodConfig = {
   mode: "production",
   output: {
+    filename: "app.[contenthash].js",
     path: path.resolve(__dirname, "../dist"),
     assetModuleFilename: 'images/[name][ext][query]'
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css"
+      filename: "[name][hash].css"
     })
   ],
   module: {
@@ -31,13 +32,16 @@ const prodConfig = {
     ]
   },
   optimization: {
+    splitChunks: {
+      chunks: 'all'
+    },
     minimize: true,
     minimizer: [
       new CleanWebpackPlugin(),
       new CssMinimizerPlugin(),
       new TerserPlugin({
         extractComments: false,
-      })
+      }),
     ]
   }
 }

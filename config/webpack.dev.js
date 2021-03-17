@@ -26,6 +26,7 @@ const devConfig = {
       }
     ]
   },
+  
 }
 
 module.exports = merge(base, devConfig)
