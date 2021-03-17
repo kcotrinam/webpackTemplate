@@ -1,0 +1,2 @@
+(()=>{"use strict";const t=document.querySelector(".joke-container");(async()=>{const n=await(async()=>{const t=await fetch("https://api.chucknorris.io/jokes/random");return await t.json()})();t.innerText=n.value})()})();
+//# sourceMappingURL=app.c674d0ba88378e8441cf.js.map
