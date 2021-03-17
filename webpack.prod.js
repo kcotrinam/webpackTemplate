@@ -6,16 +6,25 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const base = require("./webpack.base");
 const { merge } = require("webpack-merge");
 
-module.exports = merge(base, {
+const prodConfig = {
   mode: "production",
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     })
   ],
+  module: {
+    rules: [
+      {
+        test: /.(scss)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
+      },
+    ]
+  },
   optimization: {
     minimize: true,
     minimizer: [
@@ -26,4 +35,6 @@ module.exports = merge(base, {
       })
     ]
   }
-})
+}
+
+module.exports = merge(base, prodConfig)
