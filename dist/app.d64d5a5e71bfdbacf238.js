@@ -1,2 +1,0 @@
-(()=>{"use strict";const e=document.querySelector("body"),n=document.createElement("div");n.innerHTML="Hello chuck!";console.log("hello"),(async()=>{const t=await(async()=>{const e=await fetch("https://api.chucknorris.io/jokes/random");return await e.json()})();e.innerText=t.value,e.appendChild(n),e.appendChild(n)})()})();
-//# sourceMappingURL=app.d64d5a5e71bfdbacf238.js.map

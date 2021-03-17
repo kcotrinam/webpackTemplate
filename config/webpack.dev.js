@@ -1,11 +1,10 @@
-const path = require("path");
 const base = require("./webpack.base");
 const { merge } = require("webpack-merge");
 
 const devConfig = {
   mode: "development",
   output: {
-    path: path.resolve(__dirname, "../dist"),
+    
     assetModuleFilename: '[name][ext][query]'
   },
   devServer: {
