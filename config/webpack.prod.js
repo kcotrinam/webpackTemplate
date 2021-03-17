@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -8,6 +9,10 @@ const { merge } = require("webpack-merge");
 
 const prodConfig = {
   mode: "production",
+  output: {
+    path: path.resolve(__dirname, "../dist"),
+    assetModuleFilename: 'images/[name][ext][query]'
+  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "[name].css"

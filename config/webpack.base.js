@@ -7,9 +7,7 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "app.js",
-    path: path.resolve(__dirname, "../dist"),
-    publicPath: "./",
-    assetModuleFilename: 'images/[name][ext][query]'
+    publicPath: "",
   },
   plugins: [
     new HtmlWebpackPlugin({

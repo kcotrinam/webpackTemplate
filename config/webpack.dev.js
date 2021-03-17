@@ -1,8 +1,19 @@
+const path = require("path");
 const base = require("./webpack.base");
 const { merge } = require("webpack-merge");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const devConfig = {
   mode: "development",
+  output: {
+    path: path.resolve(__dirname, "../dist"),
+    assetModuleFilename: '[name][ext][query]'
+  },
+  devServer: {
+    port: 3000,
+    contentBase: "../dist",
+    // open: "edge"
+  },
   module: {
     rules: [
       {
@@ -14,7 +25,7 @@ const devConfig = {
         ]
       }
     ]
-  }
+  },
 }
 
 module.exports = merge(base, devConfig)
