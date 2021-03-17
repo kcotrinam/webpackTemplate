@@ -12,7 +12,7 @@ const devConfig = {
   devServer: {
     port: 3000,
     contentBase: "../dist",
-    // open: "edge"
+    open: true
   },
   module: {
     rules: [
