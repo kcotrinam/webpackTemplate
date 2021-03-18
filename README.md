@@ -1,47 +1,63 @@
 # webpackTemplate
-This is a template for webpack settings
+
+This is a basic template of Webpack configuration.
 
 ## :hammer: Built with
 
 - webpack
 
-## :hammer: Content
+## :factory: Content
 
-1. Sass-loader.
-2. HtmlWebpackPlugin.
-3. MiniCssExtractPlugin.
-4. CssMinimizerPlugin
+1. [Webpack](https://webpack.js.org/)
+2. [Sass-loader](https://github.com/webpack-contrib/sass-loader)
+3. [Html-Webpack-plguin](https://github.com/jantimon/html-webpack-plugin)
+4. [Mini-Css-Extract-Plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
+5. [Css-Minimizer-Webpack-Plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)
 
-
-## :construction_worker: Getting Started
+## :book: :construction_worker: Getting Started
 
 To get a local copy up and running follow these simple steps:
 
-1. Go to the [repository page](https://github.com/kcotrinam/Portfolio/).
-2. Press the "Code" button and copy the link.
-3. Clone it using git command `git clone <link>`.
+1. Go to the [repository page](https://github.com/kcotrinam/webpackTemplate).
+2. Click on the "Code" button and copy the HTTPS link.
+3. Clone the repository: `git clone <you_repository_link>`.
+4. Move to the local project: `cd <Your_repository_name>`.
+5. run `npm install`.
 
-## :construction_worker: Pre-requisites?
+## :memo: Pre-requisites?
 
 1. Install node-js
 
-## :construction_worker: How to use it?
+## :rocket: How to use it?
 
 1. Click on `Use this template`.
-2. Create your repository
-3. Clone your new repository: `git clone <you_repository_link`.
-4. Move to your local repository: `cd <Your_repository_name></Your_repository_name>`.
-5. run `npm install`
+2. Choose a name for your repo.
+3. Click on "Create repository from template".
+4. Clone your new repository: `git clone <you_repository_link>`
+5. Move to your local repository: `cd <Your_repository_name>`.
+6. run `npm install`
+
+## :interrobang: How It works?
+
+1. follow the steps on the "How to use it?" section,
+2. If you want to run the development mode run: `npm run dev`.
+3. If you want to run the production mode run: `npm run dev`.
+
+## :interrobang: want to desable webpack server?
+
+1. Open the package.json file.
+2. Delete "serve" on the "dev" script.
+3. Add `--watch` on the "dev" script.
 
 ## :bust_in_silhouette: Author
 
 👤 **Kenvin Cotrina**
 
-- GitHub: [kcotrinam](https://github.com/kcotrinam) 
+- GitHub: [kcotrinam](https://github.com/kcotrinam)
 - Twitter: [@kcotrinam_dev](https://twitter.com/kcotrinam_dev)
-- LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/ )
+- LinkedIn: [KevinCotrina](https://www.linkedin.com/in/kevincotrina/)
 
-## 🤝 :raised_hand: :raised_hand: Contributions
+## :raised_hand: :raised_hand: Contributions
 
 Contributions, issues, and feature requests are welcome!
 
@@ -59,6 +75,6 @@ Give a ⭐️ if you like this project!
 - [Mini-Css-Extract-Plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)
 - [Css-Minimizer-Webpack-Plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)
 
- ## 📝 License
+## 📝 License
 
 This project is [MIT](LICENSE) licensed.
